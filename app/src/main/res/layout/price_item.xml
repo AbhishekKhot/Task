@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="8dp"
-            android:text="3797 (Bumper)"
+            android:text="@string/_3797_bumper"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="20-22"
+            android:text="@string/_20_22"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold" />

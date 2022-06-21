@@ -40,11 +40,4 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.viewpager.adapter = adapter
         binding.viewpagertab.setViewPager(binding.viewpager)
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
-
 }

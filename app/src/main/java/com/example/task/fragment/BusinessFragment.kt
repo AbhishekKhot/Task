@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.task.R
 import com.example.task.adapter.ProductAdapter
 import com.example.task.databinding.FragmentBusinessBinding
 import com.example.task.model.Post
@@ -18,6 +20,7 @@ import com.example.task.util.Resource
 class BusinessFragment : Fragment() {
     private var _binding: FragmentBusinessBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var productAdapter: ProductAdapter
     private lateinit var viewModel: GramodayViewModel
     private lateinit var postList: MutableList<Post>
@@ -43,7 +46,7 @@ class BusinessFragment : Fragment() {
 
         binding.recyclerView.apply {
             adapter = productAdapter
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = LinearLayoutManager(activity)
         }
 
 
@@ -53,6 +56,10 @@ class BusinessFragment : Fragment() {
                     binding.progressBar.visibility = View.INVISIBLE
                     it.data?.let {
                         productAdapter.differ.submitList(it.products)
+
+                        binding.tvMarketName.text = it.business.marketStdName
+                        binding.tvFirmName.text = it.business.firmName
+                        binding.tvShopNumber.text = it.business.mandiShopnum
 
                         it.products.forEach {
                             it.posts.forEach {
@@ -73,10 +80,5 @@ class BusinessFragment : Fragment() {
                 }
             }
         })
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }

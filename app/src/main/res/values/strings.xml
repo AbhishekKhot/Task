@@ -2,4 +2,25 @@
     <string name="app_name">Task</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vendor_name">Vendor name</string>
+    <string name="vendro_location">Vendro location</string>
+    <string name="language">language</string>
+    <string name="connect">Connect</string>
+    <string name="contact">Contact</string>
+    <string name="commission_agent">Commission Agent</string>
+    <string name="market_name">Market Name</string>
+    <string name="firm_name">Firm Name</string>
+    <string name="products">Products</string>
+    <string name="shop_number">Shop Number</string>
+    <string name="_3797_bumper">3797 (Bumper)</string>
+    <string name="_20_22">20-22</string>
+    <string name="product_name">product name</string>
+    <string name="yeshwanthapura_mandi_bangalore_ka">Yeshwanthapura Mandi, Bangalore, KA</string>
+    <string name="_19_06_2022">19/06/2022</string>
+    <string name="_20">20</string>
+    <string name="_22">22</string>
+    <string name="_1_kg">1/kg</string>
+    <string name="updated_at_10_18_am">updated at 10:18 AM</string>
+    <string name="share">Share</string>
+    <string name="interested">Interested</string>
 </resources>

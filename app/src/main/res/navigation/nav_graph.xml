@@ -21,5 +21,9 @@
         <action
             android:id="@+id/action_ratesFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="itemPosition"
+            app:argType="string" />
+
     </fragment>
 </navigation>

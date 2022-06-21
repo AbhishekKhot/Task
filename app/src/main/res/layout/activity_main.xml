@@ -14,7 +14,90 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/CustomToolbarStyle"
-        app:titleTextColor="@color/black" />
+        app:titleTextColor="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/vendor_name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/ivImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/vendro_location"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivImageView"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/language"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivImageView"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:text="@string/connect"
+                android:textColor="@color/white"
+                android:textSize="5sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/ivImageView"
+                app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContact"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_background"
+                android:text="@string/contact"
+                android:textColor="@color/white"
+                android:textSize="5sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/btnConnect"
+                app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment"
