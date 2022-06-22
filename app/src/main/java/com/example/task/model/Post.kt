@@ -10,7 +10,7 @@ data class Post(
     val cmdtyStdName: String,
     val computed: Computed,
     val contentType: String,
-    val createdAt: String,
+    val createdAt: String?=null,
     val dateOfReport: String,
     val loclevel2: Int,
     val loclevel2ShortName: String,
@@ -24,5 +24,5 @@ data class Post(
     val rawReportPriceUnit: String,
     val rawReportPriceUnitID: String,
     val reportID: String,
-    val updatedAt: String,
+    val updatedAt: String?=null,
 ):Parcelable
